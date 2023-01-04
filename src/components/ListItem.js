@@ -2,6 +2,12 @@ import React from 'react'
 import fuji from '../images/img6.jpg'
 
 function ListItem(props) {
+    const [changeClass, setLike] = React.useState("fa-regular fa-heart")
+
+    function like(){
+        changeClass === "fa-regular fa-heart" ? setLike("fa-solid fa-heart heart") : setLike("fa-regular fa-heart")
+    }
+
     return (
         <>
         <div className='travel-card'>
@@ -18,7 +24,14 @@ function ListItem(props) {
                
             </div>
 
+            
+
         </div>
+
+            <footer>
+                <i className={changeClass} style={{cursor: "pointer"}} onClick = {like}></i>
+            </footer>
+
             <hr />
         </>
     )

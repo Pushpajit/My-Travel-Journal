@@ -58,6 +58,22 @@ nav{
   padding: 30px;
 }
 
+footer{
+  /* border: 2px solid rebeccapurple; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 25px;
+  padding-right: 15px;
+  
+}
+
+.heart{
+  color: #F34F50;
+  
+}
+
+
 .left{
   /* border: 2px solid red; */
   height: 350px;
