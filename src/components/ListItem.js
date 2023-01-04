@@ -3,9 +3,17 @@ import fuji from '../images/img6.jpg'
 
 function ListItem(props) {
     const [changeClass, setLike] = React.useState("fa-regular fa-heart")
+    const [likeCount, setCount] = React.useState(Math.floor(Math.random() * 100))
+    console.log(likeCount)
 
     function like(){
+        if(changeClass === "fa-regular fa-heart")
+            setCount(prevCount => prevCount + 1)
+        else
+            setCount(prevCount => prevCount - 1)
+
         changeClass === "fa-regular fa-heart" ? setLike("fa-solid fa-heart heart") : setLike("fa-regular fa-heart")
+        
     }
 
     return (
@@ -30,6 +38,7 @@ function ListItem(props) {
 
             <footer>
                 <i className={changeClass} style={{cursor: "pointer"}} onClick = {like}></i>
+                <p>{likeCount}</p>
             </footer>
 
             <hr />

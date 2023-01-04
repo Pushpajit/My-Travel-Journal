@@ -65,7 +65,12 @@ footer{
   align-items: center;
   font-size: 25px;
   padding-right: 15px;
+  gap: 5px;
   
+}
+
+footer p{
+  font-size: medium;
 }
 
 .heart{
